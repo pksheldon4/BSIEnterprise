@@ -1,0 +1,27 @@
+﻿@page "/catalog"
+@using BSIEnterprise.BSIShared
+@inject HttpClient Http
+
+<PageTitle>Catalog Tab Title</PageTitle>
+
+<h1>Catalog Services Title</h1>
+
+<p>This component demonstrates the catalog services.</p>
+
+@if (catalogText == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <p>@catalogText</p>
+}
+
+@code {
+    private string catalogText = "";
+
+    protected override async Task OnInitializedAsync()
+    {
+        catalogText = await Http.GetStringAsync("api/catalog");
+    }
+}
