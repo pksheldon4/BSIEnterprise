@@ -15,6 +15,9 @@
   <ItemGroup>
     <ProjectReference Include="..\BSIClient\BSIEnterprise.BSIClient.csproj" />
     <ProjectReference Include="..\BSIShared\BSIEnterprise.BSIShared.csproj" />
+    <ProjectReference Include="..\Catalog\CatalogService\CatalogService.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
   </ItemGroup>
 
 

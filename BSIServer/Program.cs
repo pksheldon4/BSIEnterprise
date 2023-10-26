@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.ResponseCompression;
+using CatalogService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,6 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+
+builder.AddCatalog();
 
 var app = builder.Build();
 
